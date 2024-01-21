@@ -12,6 +12,7 @@ import {
 } from "@mui/material";
 import AppRegistrationIcon from "@mui/icons-material/AppRegistration";
 import { Mail, Notifications } from "@mui/icons-material";
+import { useState } from "react";
 
 const StyledToolbar = styled(Toolbar)({
   display: "flex",
@@ -44,6 +45,9 @@ const UserBox = styled(Box)(({ theme }) => ({
 }));
 
 const Navbar = () => {
+
+  const [open, setOpen] = useState(false)
+
   return (
     <AppBar position="sticky" sx={{ bgcolor: "darkorange" }}>
       <StyledToolbar>
@@ -64,9 +68,10 @@ const Navbar = () => {
           <Avatar
             sx={{ width: 30, height: 30 }}
             src="https://randomuser.me/api/portraits/lego/0.jpg"
+          onClick={(e) => setOpen(true)}
           />
         </Icons>
-        <UserBox>
+        <UserBox onClick={(e) => setOpen(true)}>
           <Typography variant="span">Carter</Typography>
           <Avatar
             sx={{ width: 30, height: 30 }}
@@ -78,7 +83,8 @@ const Navbar = () => {
       <Menu
         id="demo-positioned-menu"
         aria-labelledby="demo-positioned-button"
-        open={true}
+        open={open}
+        onClose={(e) => setOpen(false)}
         anchorOrigin={{
           vertical: 'top',
           horizontal: 'right',
