@@ -51,7 +51,7 @@ const Navbar = () => {
   return (
     <AppBar position="sticky" sx={{ bgcolor: "darkorange" }}>
       <StyledToolbar>
-        <Typography variant="h6" sx={{ display: { xs: "none", sm: "block" } }}>
+        <Typography variant="h6" fontWeight={700} sx={{ display: { xs: "none", sm: "block" } }}>
           ASSETS
         </Typography>
         <AppRegistrationIcon sx={{ display: { xs: "block", sm: "none" } }} />
