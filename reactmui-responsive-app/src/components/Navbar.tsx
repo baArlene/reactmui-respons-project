@@ -52,7 +52,7 @@ const Navbar = () => {
     <AppBar position="sticky" sx={{ bgcolor: "darkorange" }}>
       <StyledToolbar>
         <Typography variant="h6" fontWeight={700} sx={{ display: { xs: "none", sm: "block" } }}>
-          ASSETS
+          CHAT-ROOM-2024
         </Typography>
         <AppRegistrationIcon sx={{ display: { xs: "block", sm: "none" } }} />
         <Search>
@@ -68,10 +68,10 @@ const Navbar = () => {
           <Avatar
             sx={{ width: 30, height: 30 }}
             src="https://randomuser.me/api/portraits/lego/0.jpg"
-          onClick={(e) => setOpen(true)}
+          onClick={() => setOpen(true)}
           />
         </Icons>
-        <UserBox onClick={(e) => setOpen(true)}>
+        <UserBox onClick={() => setOpen(true)}>
           <Typography variant="span">Carter</Typography>
           <Avatar
             sx={{ width: 30, height: 30 }}
@@ -84,7 +84,7 @@ const Navbar = () => {
         id="demo-positioned-menu"
         aria-labelledby="demo-positioned-button"
         open={open}
-        onClose={(e) => setOpen(false)}
+        onClose={() => setOpen(false)}
         anchorOrigin={{
           vertical: 'top',
           horizontal: 'right',
