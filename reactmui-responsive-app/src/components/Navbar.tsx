@@ -49,7 +49,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false)
 
   return (
-    <AppBar position="sticky" sx={{ bgcolor: "darkorange" }}>
+    <AppBar position="sticky">
       <StyledToolbar>
         <Typography variant="h6" fontWeight={700} sx={{ display: { xs: "none", sm: "block" } }}>
           CHAT-ROOM-2024

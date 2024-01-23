@@ -13,7 +13,13 @@ import {
 } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 import { useState } from "react";
-import { DateRange, EmojiEmotions, Image, PersonAdd, VideoCameraBack } from "@mui/icons-material";
+import {
+  DateRange,
+  EmojiEmotions,
+  Image,
+  PersonAdd,
+  VideoCameraBack,
+} from "@mui/icons-material";
 
 const StyledModal = styled(Modal)({
   display: "flex",
@@ -51,7 +57,14 @@ const Add = () => {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box width={400} height={300} bgcolor="white" p={3} borderRadius={5}>
+        <Box
+          width={400}
+          height={300}
+          bgcolor={"background.default"}
+          color={"text.primary"}
+          p={3}
+          borderRadius={5}
+        >
           <Typography variant="h6" color="gray" textAlign="center">
             Create Post
           </Typography>
@@ -65,23 +78,27 @@ const Add = () => {
             </Typography>
           </UserBox>
           <TextField
-          sx={{width:'100%'}}
+            sx={{ width: "100%" }}
             id="standard-multiline-static"
             multiline
             rows={3}
             placeholder="What's on your mind?"
             variant="standard"
           />
-          <Stack direction='row' gap={1} mt={2} mb={3}>
-            <EmojiEmotions color="primary"/>
+          <Stack direction="row" gap={1} mt={2} mb={3}>
+            <EmojiEmotions color="primary" />
             <Image color="secondary" />
             <VideoCameraBack color="success" />
             <PersonAdd color="error" />
           </Stack>
-          <ButtonGroup fullWidth variant="contained" aria-label='outlined primary button group'>
+          <ButtonGroup
+            fullWidth
+            variant="contained"
+            aria-label="outlined primary button group"
+          >
             <Button>Post</Button>
-            <Button sx={{width: '100px'}}>
-                <DateRange />
+            <Button sx={{ width: "100px" }}>
+              <DateRange />
             </Button>
           </ButtonGroup>
         </Box>
